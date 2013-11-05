@@ -32,15 +32,15 @@ Essa é uma versão .NET da versão orginalmente escrita em ruby: https://github
 Instalando
 ----------
 ```bash
-sudo gem install nhanhanha
+PM> Install-Package NhaNhaNha
 ```
 
 Uso
 -----
 ```csharp
 var pessoa = new Pessoa(Sexo.Homen);
-pessoa.PrimeiroNome  #=> "Eric"
-pessoa.SobreNome  #=> "Macedo Soares"
+pessoa.PrimeiroNome  => "Eric"
+pessoa.SobreNome  => "Macedo Soares"
 ```
 
 Contribuindo

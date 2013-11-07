@@ -25,7 +25,6 @@ namespace NhaNhaNha
                     primeiroNome = Valores.Pessoa[sexo.ToString()].Sample().Captalize();
                 return primeiroNome;
             }
-            set { primeiroNome = value; }
         }
         public string SobreNome
         {
@@ -35,7 +34,6 @@ namespace NhaNhaNha
                     sobreNome = GeraSobreNome();
                 return sobreNome;
             }
-            set { sobreNome = value; }
         }
 
         public int Idade
@@ -51,13 +49,13 @@ namespace NhaNhaNha
                             idade = random.Next(11);
                             break;
                         case FaixaEtaria.Adolescente:
-                            idade = random.Next(6)+12;
+                            idade = random.Next(6) + 12;
                             break;
                         case FaixaEtaria.Adulto:
-                            idade = random.Next(41)+19;
+                            idade = random.Next(41) + 19;
                             break;
                         case FaixaEtaria.Idoso:
-                            idade = random.Next(70)+60;
+                            idade = random.Next(70) + 60;
                             break;
                     }
                 }

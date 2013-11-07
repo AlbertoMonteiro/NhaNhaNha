@@ -41,6 +41,8 @@
   <ItemGroup>
     <Compile Include="ConfiguracaoSorteio.cs" />
     <Compile Include="Extensions.cs" />
+    <Compile Include="FaixaEtaria.cs" />
+    <Compile Include="NhaNhaNha.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="Sexo.cs" />
     <Compile Include="Utils.cs" />

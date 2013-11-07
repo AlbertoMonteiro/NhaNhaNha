@@ -2,7 +2,7 @@
 
 namespace NhaNhaNha
 {
-    public class Valores
+    internal class Valores
     {
         public static Dictionary<string, TextoLorem> Texto = new Dictionary<string, TextoLorem>
         {

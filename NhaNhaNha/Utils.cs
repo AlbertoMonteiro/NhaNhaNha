@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace NhaNhaNha
 {
-    public class Utils
+    internal class Utils
     {
         public static T SortearPorPeso<T>(ConfiguracaoSorteio<T>[] configuracoes)
         {
@@ -12,7 +12,7 @@ namespace NhaNhaNha
                 throw new ArgumentException("Somatório de pesos deve ser igual a 100");
 
             var c = 1;
-            var prob = new Random().Next(100);
+            var prob = Rand.Next(100);
 
             return configuracoes.First(conf => c.To((c += conf.Probabilidade) - 1).Contains(prob)).Valores;
         }

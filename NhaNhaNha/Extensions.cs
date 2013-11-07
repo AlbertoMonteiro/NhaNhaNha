@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 
@@ -9,9 +8,7 @@ namespace NhaNhaNha
     {
         public static string Sample(this string[] strings)
         {
-            var random = new Random();
-
-            var index = random.Next(strings.Length-1);
+            var index = Rand.Next(strings.Length-1);
             return strings[index];
         }
 

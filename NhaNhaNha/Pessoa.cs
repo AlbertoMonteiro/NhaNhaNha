@@ -42,20 +42,19 @@ namespace NhaNhaNha
             {
                 if (idade == 0)
                 {
-                    var random = new Random();
                     switch (faixaEtaria)
                     {
                         case FaixaEtaria.Crianca:
-                            idade = random.Next(11);
+                            idade = Rand.Next(11);
                             break;
                         case FaixaEtaria.Adolescente:
-                            idade = random.Next(6) + 12;
+                            idade = Rand.Next(6) + 12;
                             break;
                         case FaixaEtaria.Adulto:
-                            idade = random.Next(41) + 19;
+                            idade = Rand.Next(41) + 19;
                             break;
                         case FaixaEtaria.Idoso:
-                            idade = random.Next(70) + 60;
+                            idade = Rand.Next(70) + 60;
                             break;
                     }
                 }

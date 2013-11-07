@@ -38,9 +38,13 @@ PM> Install-Package NhaNhaNha
 Uso
 -----
 ```csharp
-var pessoa = new Pessoa(Sexo.Homen);
-pessoa.PrimeiroNome  => "Eric"
-pessoa.SobreNome  => "Macedo Soares"
+var homen = NhaNhaNha.Homen;
+homen.PrimeiroNome  => "Eric"
+homen.SobreNome  => "Macedo Soares"
+
+var mulher = NhaNhaNha.Mulher;
+mulher.PrimeiroNome  => "Marilia"
+mulher.SobreNome  => "Monteiro Brasil"
 ```
 
 Contribuindo

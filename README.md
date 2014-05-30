@@ -1,6 +1,9 @@
 NhaNhaNha
 =====
 
+[![Build status](https://ci.appveyor.com/api/projects/status/e0y68wryloh0vg0k)](https://ci.appveyor.com/project/AlbertoMonteiro/nhanhanha)
+
+
 O Que é?
 --------
 

@@ -65,19 +65,5 @@ namespace NhaNhaNha.Test
             Assert.GreaterOrEqual(pessoa.Idade, 61);
             Assert.LessOrEqual(pessoa.Idade, 130);
         }
-
-        [Test]
-        public void GeracaoDePessoasPeloEnumerableRangeDevemSerDiferentes()
-        {
-            var homens = Enumerable.Range(1, 20).Select(x => NhaNhaNha.Homen).ToList();
-
-            var homen = homens.First();
-
-            foreach (var pessoa in homens.Skip(1))
-            {
-                Assert.AreNotEqual(homen.PrimeiroNome,pessoa.PrimeiroNome);
-                homen = pessoa;
-            }
-        }
     }
 }

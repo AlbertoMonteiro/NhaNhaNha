@@ -1,4 +1,4 @@
-﻿$dllPath = gi ".\bin\Debug\NhaNhaNha.dll";
+﻿$dllPath = gi ".\bin\Release\NhaNhaNha.dll";
 $assembly = [System.Reflection.Assembly]::LoadFrom($dllPath);
 $newVersion = $assembly.GetName().Version.ToString();
 [xml]$nuspec = Get-Content .\NhaNhaNha.nuspec;

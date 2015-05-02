@@ -1,0 +1,29 @@
+version: 1.0.{build}
+configuration: Release
+before_build:
+- nuget restore NhaNhaNha.sln
+build:
+  parallel: true
+  verbosity: minimal
+environment:
+  COVERALLS_REPO_TOKEN:
+    secure: TaPpMsCJOhM2UZHWnV9mrI5mgxq1Htu++flJCtLIzeXqaBga3IGpLaQUvc4wFT6t
+after_build:
+- ps: >-
+    cd .\NhaNhaNha
+    iex .\update-nuspec-version.ps1
+    nuget pack
+after_test: 
+# generate report for NUnit testing framework:
+    - packages\OpenCover.4.5.3809-rc94\OpenCover.Console.exe -register:user -filter:"+[*]*" -target:"packages\NUnit.Runners.2.6.4\tools\nunit-console.exe" -targetargs:"/noshadow /domain:single  NhaNhaNha.Test\bin\debug\NhaNhaNha.Test.dll" -output:coverage.xml
+    - packages\coveralls.io.1.3.2\tools\coveralls.net.exe --opencover coverage.xml
+artifacts:
+- path: NhaNhaNha\**\*.nupkg
+  name: Nuget Package
+deploy:
+- provider: NuGet
+  api_key:
+    secure: dePxaLgKHoDvRJ1Mz1W2ngqlbW8+/O8EUkcUuswBgBe+B+S2SLBTikjnpWb+K3Ox
+  skip_symbols: true
+  on:
+    branch: master

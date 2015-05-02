@@ -15,8 +15,6 @@ after_build:
 
     ls .\packages
 
-    cd .\NhaNhaNha
-
     iex .\update-nuspec-version.ps1
 
     nuget pack .\NhaNhaNha\NhaNhaNha.nuspec

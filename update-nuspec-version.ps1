@@ -1,7 +1,7 @@
-﻿$dllPath = gi ".\bin\Release\NhaNhaNha.dll";
+﻿$dllPath = gi ".\NhaNhaNha\bin\Release\NhaNhaNha.dll";
 $assembly = [System.Reflection.Assembly]::LoadFrom($dllPath);
 $newVersion = $assembly.GetName().Version.ToString();
-[xml]$nuspec = Get-Content .\NhaNhaNha.nuspec;
+[xml]$nuspec = Get-Content .\NhaNhaNha\NhaNhaNha.nuspec;
 $nuspec.package.metadata.version = $newVersion;
-$file = gi ".\NhaNhaNha.nuspec";
+$file = gi ".\NhaNhaNha\NhaNhaNha.nuspec";
 $nuspec.Save($file);

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>NhaNhaNha</id>
+        <version>1.0.1.0</version>
+        <title>NhaNhaNha</title>
+        <authors>Alberto Monteiro</authors>
+        <owners>Alberto Monteiro</owners>
+        <projectUrl>https://github.com/AlbertoMonteiro/NhaNhaNha</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>NhaNhaNha é uma biblioteca para geração de dados fictícios, porém verossímeis, para aplicações em português do Brasil. Essa é uma versão .NET da versão orginalmente escrita em ruby: https://github.com/alcidesqueiroz/BlaBla</description>
+        <summary>Uma biblioteca para geração de dados fictícios, porém realísticos, para aplicações em português brasileiro.</summary>
+        <releaseNotes>* Geração de CNPJ
+* Geração de CPF</releaseNotes>
+        <copyright>Copyright © Alberto Monteiro 2015</copyright>
+        <language>pt-BR</language>
+        <tags>cpf, cnpj, nome, sobrenome, gerador</tags>
+    </metadata>
+    <files>
+        <file src="lib\net40\NhaNhaNha.dll" target="lib\net40\NhaNhaNha.dll" />
+    </files>
+</package>

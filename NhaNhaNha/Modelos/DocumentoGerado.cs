@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace NhaNhaNha
+namespace NhaNhaNha.Modelos
 {
     public abstract class DocumentoGerado
     {

@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using NhaNhaNha.Modelos;
+using NUnit.Framework;
 
 namespace NhaNhaNha.Test
 {
@@ -9,7 +10,7 @@ namespace NhaNhaNha.Test
         [TestCase(Sexo.Mulher)]
         public void UmaPessoaDeveTerPreenchidoPrimeiroNomeComUmaStringNaoVazia(Sexo sexo)
         {
-            var pessoa = new Pessoa(sexo);
+            var pessoa = NhaNhaNha.Pessoa(sexo);
 
             Assert.IsFalse(string.IsNullOrWhiteSpace(pessoa.PrimeiroNome));
         }

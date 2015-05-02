@@ -1,4 +1,4 @@
-﻿namespace NhaNhaNha
+﻿namespace NhaNhaNha.Modelos
 {
     public class CPFGerado : DocumentoGerado
     {

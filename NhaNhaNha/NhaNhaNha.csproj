@@ -32,28 +32,29 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CNPJGerado.cs" />
-    <Compile Include="ConfiguracaoSorteio.cs" />
-    <Compile Include="CPFGerado.cs" />
-    <Compile Include="DocumentoGerado.cs" />
-    <Compile Include="Extensions.cs" />
-    <Compile Include="FaixaEtaria.cs" />
+    <Compile Include="Extensions\Extensions.cs" />
+    <Compile Include="Ferramentas\ConfiguracaoSorteio.cs" />
+    <Compile Include="Ferramentas\Rand.cs" />
+    <Compile Include="Ferramentas\Utils.cs" />
+    <Compile Include="Ferramentas\Valores.cs" />
+    <Compile Include="Geradores\GeradorCNPJ.cs" />
+    <Compile Include="Geradores\GeradorCPF.cs" />
+    <Compile Include="Geradores\GeradorDocumento.cs" />
+    <Compile Include="Geradores\GeradorPessoa.cs" />
+    <Compile Include="Geradores\IGerador.cs" />
+    <Compile Include="Modelos\CNPJGerado.cs" />
+    <Compile Include="Modelos\CPFGerado.cs" />
+    <Compile Include="Modelos\DocumentoGerado.cs" />
+    <Compile Include="Modelos\FaixaEtaria.cs" />
+    <Compile Include="Modelos\PessoaGerada.cs" />
+    <Compile Include="Modelos\Sexo.cs" />
     <Compile Include="NhaNhaNha.cs" />
-    <Compile Include="Pessoa.cs" />
-    <Compile Include="Rand.cs" />
-    <Compile Include="Sexo.cs" />
-    <Compile Include="Utils.cs" />
-    <Compile Include="Valores.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TextoLorem.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

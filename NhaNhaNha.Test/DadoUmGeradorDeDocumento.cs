@@ -1,4 +1,5 @@
 ﻿using System.Text.RegularExpressions;
+using NhaNhaNha.Extensions;
 using NUnit.Framework;
 
 namespace NhaNhaNha.Test
@@ -23,8 +24,8 @@ namespace NhaNhaNha.Test
         [Test]
         public void AoGerarCpfResultadoDeveDeveConterUmFormatoEspecifico()
         {
-            var cpf = NhaNhaNha.CPF;
-            Assert.IsTrue(Regex.IsMatch(cpf.Formatado, @"\d{3}\.\d{3}\.\d{3}-\d{2}"));
+            var cpf = NhaNhaNha.CPFFormatado;
+            Assert.IsTrue(Regex.IsMatch(cpf, @"\d{3}\.\d{3}\.\d{3}-\d{2}"));
         }
 
         [Test]
@@ -44,8 +45,8 @@ namespace NhaNhaNha.Test
         [Test]
         public void AoGerarCnpjResultadoDeveDeveConterUmFormatoEspecifico()
         {
-            var cnpj = NhaNhaNha.Cnpj;
-            Assert.IsTrue(Regex.IsMatch(cnpj.Formatado, @"\d{1}\.\d{3}\.\d{3}/0001-\d{2}"));
+            var cnpj = NhaNhaNha.CnpjFormatado;
+            Assert.IsTrue(Regex.IsMatch(cnpj, @"\d{1}\.\d{3}\.\d{3}/0001-\d{2}"));
         }
 
     }

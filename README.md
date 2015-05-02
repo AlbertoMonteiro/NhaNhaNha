@@ -12,19 +12,19 @@ O Que é?
 NhaNhaNha é uma biblioteca para geração de dados fictícios, porém verossímeis, para aplicações em português do Brasil.
 Essa é uma versão .NET da versão orginalmente escrita em ruby: https://github.com/alcidesqueiroz/BlaBla
 
-###A versão inicial(0.0.1) já conta com:
+###A versão inicial(1.0.1) já conta com:
 
 *	Gerador de Nomes Próprios de Pessoas
 
-###Na versão 0.0.2 foi incluído:
+###Na versão 1.0.2 foi incluído:
 *	Gerador de CPF
 *	Gerador de CNPJ
-*	Gerador de Cartão de Crédito
-*	Gerador de Bacon Ipsum
-*	Gerador de Lorem Ipsum
 
 ###Para as próximas versões devem vir:
 
+*	Gerador de Cartão de Crédito
+*	Gerador de Bacon Ipsum
+*	Gerador de Lorem Ipsum
 *	Gerador de CEP	
 *	Gerador de Endereços
 *	Gerador de URLs
@@ -42,6 +42,9 @@ PM> Install-Package NhaNhaNha
 
 Uso
 -----
+
+#### Gerando uma pessoa
+
 ```csharp
 var homen = NhaNhaNha.Homen;
 homen.PrimeiroNome  => "Eric"
@@ -52,9 +55,29 @@ mulher.PrimeiroNome  => "Marilia"
 mulher.SobreNome  => "Monteiro Brasil"
 ```
 
+#### Gerando CPF
+
+```csharp
+string cpf = NhaNhaNha.CPF;
+cpf => "17420059691"
+
+string cpfFormatado = NhaNhaNha.CPFFormatado;
+cpfFormatado => "174.200.596-91"
+```
+
+#### Gerando CNPJ
+
+```csharp
+string cnpj = NhaNhaNha.CNPJ;
+cnpj => "40134115000193"
+
+string cnpjFormatado = NhaNhaNha.CNPJFormatado;
+cnpjFormatado => "40.134.115/0001-93"
+```
+
 Contribuindo
 ------------
-Se você deseja contribuir, faça um Fork do [repo](https://github.com/AlbertoMonteiro/NhaNhaNha) no Github, faça as suas alterações e mande um pull request.
+Se você deseja contribuir, faça um Fork do [repositório](https://github.com/AlbertoMonteiro/NhaNhaNha) no Github, faça as suas alterações e mande um pull request.
 
 
 Contato

@@ -64,12 +64,6 @@ namespace NhaNhaNha
 
         private static string GeraSobreNome()
         {
-            /*var agnome = Utils.SortearPorPeso(new[]
-            {
-                new ConfiguracaoSorteio {Probabilidade = 95, Valores = null},
-                new ConfiguracaoSorteio {Probabilidade = 5, Valores = Valores.Pessoa["AgNomes"].Sample()}
-            });*/
-
             int quantidadeSobrenomes = Utils.SortearPorPeso(new[]
             {
                 new ConfiguracaoSorteio<int> {Probabilidade = 65, Valores = 2},

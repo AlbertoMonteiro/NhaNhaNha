@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 
 namespace NhaNhaNha
 {
@@ -7,10 +6,6 @@ namespace NhaNhaNha
     {
         public static T SortearPorPeso<T>(ConfiguracaoSorteio<T>[] configuracoes)
         {
-            var somaProbabilidade = configuracoes.Sum(conf => conf.Probabilidade);
-            if (somaProbabilidade != 100)
-                throw new ArgumentException("Somatório de pesos deve ser igual a 100");
-
             var c = 1;
             var prob = Rand.Next(100);
 

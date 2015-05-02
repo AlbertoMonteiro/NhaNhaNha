@@ -1,23 +1,24 @@
-﻿using System.Linq;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace NhaNhaNha.Test
 {
     [TestFixture]
     public class DadoUmaPessoa
     {
-        [Test]
-        public void UmaPessoaDeveTerPreenchidoPrimeiroNomeComUmaStringNaoVazia()
+        [TestCase(Sexo.Homen)]
+        [TestCase(Sexo.Mulher)]
+        public void UmaPessoaDeveTerPreenchidoPrimeiroNomeComUmaStringNaoVazia(Sexo sexo)
         {
-            var pessoa = new Pessoa(Sexo.Homen);
+            var pessoa = new Pessoa(sexo);
 
             Assert.IsFalse(string.IsNullOrWhiteSpace(pessoa.PrimeiroNome));
         }
 
-        [Test]
-        public void UmaPessoaDeveTerPreenchidoSobreNomeComUmaStringNaoVazia()
+        [TestCase(Sexo.Homen)]
+        [TestCase(Sexo.Mulher)]
+        public void UmaPessoaDeveTerPreenchidoSobreNomeComUmaStringNaoVazia(Sexo sexo)
         {
-            var pessoa = NhaNhaNha.Homen;
+            var pessoa = sexo == Sexo.Homen ? NhaNhaNha.Homen : NhaNhaNha.Mulher;
 
             Assert.IsFalse(string.IsNullOrWhiteSpace(pessoa.SobreNome));
         }

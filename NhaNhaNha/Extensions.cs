@@ -19,7 +19,10 @@ namespace NhaNhaNha
 
         public static IEnumerable<int> To(this int a, int b)
         {
-            return Enumerable.Range(a, b);
+            var enumerable = Enumerable.Range(a, b);
+            if (a < b)
+                enumerable = enumerable.Reverse();
+            return enumerable;
         }
     }
 }

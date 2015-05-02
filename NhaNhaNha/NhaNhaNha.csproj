@@ -39,7 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CNPJGerado.cs" />
     <Compile Include="ConfiguracaoSorteio.cs" />
+    <Compile Include="CPFGerado.cs" />
+    <Compile Include="DocumentoGerado.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="FaixaEtaria.cs" />
     <Compile Include="NhaNhaNha.cs" />

@@ -1,7 +1,9 @@
 NhaNhaNha
 =====
 
-[![Build status](https://ci.appveyor.com/api/projects/status/e0y68wryloh0vg0k)](https://ci.appveyor.com/project/AlbertoMonteiro/nhanhanha)
+[![Build status](https://ci.appveyor.com/api/projects/status/e0y68wryloh0vg0k?svg=true)](https://ci.appveyor.com/project/AlbertoMonteiro/nhanhanha)
+[![Nuget count](http://img.shields.io/nuget/v/NhaNhaNha.svg)](http://www.nuget.org/packages/NhaNhaNha/)
+[![Nuget downloads](http://img.shields.io/nuget/dt/NhaNhaNha.svg)](http://www.nuget.org/packages/NhaNhaNha/)
 
 
 O Que é?

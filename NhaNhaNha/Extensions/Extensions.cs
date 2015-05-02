@@ -39,6 +39,25 @@ namespace NhaNhaNha.Extensions
             return digits.Concat(new[] { rest < 2 ? 0 : 11 - rest });
         }
 
+        public static bool CartaoCreditoValido(this string cartao)
+        {
+            var sum = cartao.Select((a,d) =>
+            {
+                int n;
+                if (d % 2 == 0)
+                    n = (int)char.GetNumericValue(a);
+                else
+                {
+                    n = (int)char.GetNumericValue(cartao[d - 1]) * 2;
+                    if (n >= 10)
+                        n -= 9;
+                }
+                return n;
+            }).Sum();
+            return sum % 10 == 0;
+        }
+
+
         public static string Sample(this string[] strings)
         {
             var index = Rand.Next(strings.Length - 1);

@@ -7,19 +7,21 @@ namespace NhaNhaNha
     {
         private static readonly IGerador<CPFGerado, DocumentoGeracao> geradorCpf;
         private static readonly IGerador<CNPJGerado, DocumentoGeracao> geradorCnpj;
-        private static readonly IGerador<PessoaGerada, PessoaConfiguracao> geradorPesoa;
+        private static readonly IGerador<PessoaGerada, PessoaConfiguracao> geradorPessoa;
+        private static IGerador<CartaoCreditoGerado, CartaoCreditoConfiguracao> geradorCartaoCredito;
 
         static NhaNhaNha()
         {
             geradorCpf = new GeradorCPF();
             geradorCnpj = new GeradorCNPJ();
-            geradorPesoa = new GeradorPessoa();
+            geradorPessoa = new GeradorPessoa();
+            geradorCartaoCredito = new GeradorCartaoCredito();
         }
         public static PessoaGerada Homen
         {
             get
             {
-                return geradorPesoa.Gera(new PessoaConfiguracao { Sexo = Sexo.Homen });
+                return geradorPessoa.Gera(new PessoaConfiguracao { Sexo = Sexo.Homen });
             }
         }
 
@@ -27,7 +29,7 @@ namespace NhaNhaNha
         {
             get
             {
-                return geradorPesoa.Gera(new PessoaConfiguracao { Sexo = Sexo.Mulher });
+                return geradorPessoa.Gera(new PessoaConfiguracao { Sexo = Sexo.Mulher });
             }
         }
 
@@ -63,9 +65,17 @@ namespace NhaNhaNha
             }
         }
 
+        public static CartaoCreditoGerado CartaoCredito
+        {
+            get
+            {
+                return geradorCartaoCredito.Gera();
+            }
+        }
+
         public static PessoaGerada Pessoa(Sexo sexo = Sexo.Homen, FaixaEtaria faixaEtaria = FaixaEtaria.Adulto)
         {
-            return geradorPesoa.Gera(new PessoaConfiguracao { Sexo = sexo, FaixaEtaria = faixaEtaria});
+            return geradorPessoa.Gera(new PessoaConfiguracao { Sexo = sexo, FaixaEtaria = faixaEtaria});
         }
     }
 }

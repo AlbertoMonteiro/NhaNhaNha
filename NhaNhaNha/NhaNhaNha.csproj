@@ -39,11 +39,13 @@
     <Compile Include="Ferramentas\Rand.cs" />
     <Compile Include="Ferramentas\Utils.cs" />
     <Compile Include="Ferramentas\Valores.cs" />
+    <Compile Include="Geradores\GeradorCartaoCredito.cs" />
     <Compile Include="Geradores\GeradorCNPJ.cs" />
     <Compile Include="Geradores\GeradorCPF.cs" />
     <Compile Include="Geradores\GeradorDocumento.cs" />
     <Compile Include="Geradores\GeradorPessoa.cs" />
     <Compile Include="Geradores\IGerador.cs" />
+    <Compile Include="Modelos\CartaoCreditoGerado.cs" />
     <Compile Include="Modelos\CNPJGerado.cs" />
     <Compile Include="Modelos\CPFGerado.cs" />
     <Compile Include="Modelos\DocumentoGerado.cs" />

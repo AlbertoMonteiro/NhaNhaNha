@@ -17,6 +17,6 @@
         <tags>cpf, cnpj, nome, sobrenome, gerador</tags>
     </metadata>
     <files>
-        <file src="lib\net40\NhaNhaNha.dll" target="lib\net40\NhaNhaNha.dll" />
+        <file src="bin\Release\NhaNhaNha.dll" target="lib\net40\NhaNhaNha.dll" />
     </files>
 </package>
